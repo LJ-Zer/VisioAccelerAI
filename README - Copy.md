@@ -322,3 +322,46 @@ _All libraries and dependencies should have the same version when cloning from G
 	```sh
 	*Atleast 32 GB of RAM to run synthesis*
 	```
+
+### Inferencing using modified DPU
+
+1. Unload existing Accelerator and Load the Hardware Accelerator DPU
+	```sh
+	sudo xlnx-config --xmutil unloadapp
+	```
+	```sh
+	sudo xlnx-config --xmutil loadapp Visio_DPU
+	```
+
+2. From the directory of your model.
+	```sh
+	source ~/miniforge3/bin/activate
+	```
+	```sh
+	conda activate visio-env
+	```
+3. Inference Facial Recognition
+	```sh
+	python inference_image.py --modeldir"" --imagedir="../Face_Detect/face_detected"
+	```
+
+4. Inference Face Detection
+	```sh	
+	source build.sh
+	```
+	```sh
+	/usr/bin/g++ -std=c++17 -I. -I/usr/include/opencv4 -o test_video_facedetect test_video_facedetect.cpp -lopencv_core 
+	```
+	```sh
+	lopencv_video -lopencv_videoio -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui -lvitis_ai_library-facedetect 
+	-lvitis_ai_library-dpu_task -pthread -lglog
+	```
+	```sh
+	- ./Visio-FD densebox_640_360.xmodel 0
+	```
+
+5. Note for bash build.sh
+	```sh
+	*This file should be came from the original file location not from GitHub. If it is from GitHub, this would not run, so take note for the original build.sh file. *
+	```
+
