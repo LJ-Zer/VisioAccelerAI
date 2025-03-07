@@ -1,3 +1,13 @@
+# Notes for each Folders
+
+### 1. Face_Detect
+### 2. Facial_Recog
+### 3. Layers Counter
+### 4. Visio_DPU
+### 5. Face_Detect.sh
+### 6. Facial Recog.sh
+### 7. executes.sh
+
 # Xilinx Kria Configuration
 
 ### 1. Install BalenaEtcher or Win32Diskmanager to flash the Ubuntu 20.04 in Xilinx Kria. Follow the steps in the link.
