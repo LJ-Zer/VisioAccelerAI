@@ -208,6 +208,6 @@
 ### 6. For the facial recognition. 
     - The model continously to inference images even it is already inference. So the solution is to create a command that the processed images will move to other folder so that the script wont process it again.
 
-### 7. Git push from Ubuntu
+### 7. Pushing local repo from Ubuntu
 	- https://www.youtube.com/watch?v=ePCBuIQJAUc
 
