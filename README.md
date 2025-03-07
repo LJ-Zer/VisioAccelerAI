@@ -211,3 +211,29 @@
 ### 7. Pushing local repo from Ubuntu
 	- https://www.youtube.com/watch?v=ePCBuIQJAUc
 
+
+# Using Digilent Arty Z7 20T (For further development hehe)
+
+*This is instruction for accessing the Hardware design for Digilent Arty Z7 20T based on Zynq 7000 SoC.*
+
+## ***Installation for Vivado 2022.1***
+
+- https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Unified_2022.1_0420_0327_Win64.exe
+
+*Note: Fill up the necessary information and scroll down for the download button. It requires 150 GB of storage.*
+
+## ***Zynq Files***
+
+- git clone https://github.com/Xilinx/PYNQ.git
+
+### Steps:
+
+- 1. From the folder of the Pynq, go to Pynq/boards/Pynq-Z1/base. And copy the address of that folder. 
+- 1. Open the Vivado 2022.1
+- 2. In the main page of the Vivado, go to the "window" tab, and click the TCL Console.
+- 3. In the console, type "cd {paste/the/address/of/the/folder}"
+- 4. Enter, and wait for the loading time.
+- 5. In the console again, type "source ./build_ip.tcl"
+- 6. Enter, and wait for the loading time.
+- 7. In the console again,  type "source ./base.tcl"
+- 8. And wait for the loading time, it takes a lot of time to see the hardware design.
