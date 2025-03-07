@@ -357,7 +357,7 @@ _All libraries and dependencies should have the same version when cloning from G
 	-lvitis_ai_library-dpu_task -pthread -lglog
 	```
 	```sh
-	- ./Visio-FD densebox_640_360.xmodel 0
+	./Visio-FD densebox_640_360.xmodel 0
 	```
 
 5. Note for bash build.sh
@@ -365,3 +365,32 @@ _All libraries and dependencies should have the same version when cloning from G
 	*This file should be came from the original file location not from GitHub. If it is from GitHub, this would not run, so take note for the original build.sh file. *
 	```
 
+### Vitis-AI Installation
+	```sh
+	References: https://xilinx.github.io/Vitis-AI/3.0/html/docs/quickstart/mpsoc.htmlfbclid=IwAR0ah9oX4Zd8f9ifqja1FZjk_2vhF4aItGtAxA6qU55ktKqE7Q9UgzY6bh8
+	```
+	
+1. Installation of Ubuntu 20.04 LTS. Go to powershell run in administrator, then execute this code. 
+	```sh
+	- wsl --install -d Ubuntu-20.04
+	```
+
+2. Installation of Docker, download and install this link.
+	```sh
+	https://docs.docker.com/desktop/install/windows-install/
+	```
+
+3. Create accound and sign in the docker. 
+
+4. Go to the settings, enable the integration of WSL.
+
+5. Setup Vitis AI
+	```sh
+	source /home/lj/petalinux_sdk_2023.1/environment-setup-cortexa72-cortexa53-xilinx-linux
+	```
+	```sh
+	source /home/lj/petalinux_sdk_2023.1/environment-setup-cortexa72-cortexa53-xilinx-linux
+	```
+	```sh
+	./docker_run.sh xilinx/vitis-ai-pytorch-cpu:latest
+	```
