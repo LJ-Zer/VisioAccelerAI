@@ -75,10 +75,10 @@ _Below is the installation process how to install operating system to XIlinx Kri
    ```	
 5. (UBUNTU 22.04) Install Vitis-AI libraries
 
-	```sh 
+	_```sh 
 	https://xilinx-wiki.atlasssian.net/wiki/spaces/A/pages/2072838191/Building+Vitis-AI+Sample+Applications+on+Certified+Ubuntu+20.04+LTS+for+Xilinx+Devices
-	```
-	
+	```_
+
 	```sh
 	sudo snap install xlnx-config --classic
 	```
