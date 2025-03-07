@@ -367,9 +367,7 @@ _All libraries and dependencies should have the same version when cloning from G
 
 ### Vitis-AI Installation
 
-	```sh
-	*References: https://xilinx.github.io/Vitis-AI/3.0/html/docs/quickstart/mpsoc.htmlfbclid=IwAR0ah9oX4Zd8f9ifqja1FZjk_2vhF4aItGtAxA6qU55ktKqE7Q9UgzY6bh8*
-	```
+*References: https://xilinx.github.io/Vitis-AI/3.0/html/docs/quickstart/mpsoc htmlfbclid=IwAR0ah9oX4Zd8f9ifqja1FZjk_2vhF4aItGtAxA6qU55ktKqE7Q9UgzY6bh8*
 	
 1. Installation of Ubuntu 20.04 LTS. Go to powershell run in administrator, then execute this code. 
 	```sh
