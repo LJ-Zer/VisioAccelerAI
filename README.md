@@ -99,8 +99,7 @@ NOTE:
 	- If it is from GitHub, this would not run, so take note for the original build.sh file.
 
 # Vitis-AI Installation
-
-- References: https://xilinx.github.io/Vitis-AI/3.0/html/docs/quickstart/mpsoc.html fbclid=IwAR0ah9oX4Zd8f9ifqja1FZjk_2vhF4aItGtAxA6qU55ktKqE7Q9UgzY6bh8
+- References: https://xilinx.github.io/Vitis-AI/3.0/html/docs/quickstart/mpsoc.htmlfbclid=IwAR0ah9oX4Zd8f9ifqja1FZjk_2vhF4aItGtAxA6qU55ktKqE7Q9UgzY6bh8
 
 ***Installation of Ubuntu 20.04 LTS***
 
