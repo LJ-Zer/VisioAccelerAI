@@ -140,7 +140,7 @@
 
 * NOTE: All libraries and dependencies should have the same version when cloning from GitHub. Since the commands in TCL and Makefiles are designed for Unix, the file paths follow the Linux format. So, update the paths accordingly if you're on Windows, or just use Linux instead.
 
-# Inferencing using your DPU
+# Inferencing using modified DPU
 
 ### 0. Unload existing Accelerator and Load the Hardware Accelerator DPU
 	- sudo xlnx-config --xmutil unloadapp
