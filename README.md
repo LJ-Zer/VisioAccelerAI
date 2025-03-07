@@ -113,4 +113,9 @@ NOTE:
 
 ## 4. Go to the settings, enable the integration of WSL.
 
+## 5. Setup Vitis AI
+	- source /home/lj/petalinux_sdk_2023.1/environment-setup-cortexa72-cortexa53-xilinx-linux
+	- source /home/lj/petalinux_sdk_2023.1/environment-setup-cortexa72-cortexa53-xilinx-linux
+	- ./docker_run.sh xilinx/vitis-ai-pytorch-cpu:latest
+
 
