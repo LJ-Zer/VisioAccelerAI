@@ -4,10 +4,10 @@
 	- Reference: https://xilinx.github.io/kria-apps-docs/kv260/2021.1/build/html/docs/build_vivado_design.html
 	- Other Flow: https://github.com/Xilinx/Vitis-AI-Tutorials/tree/2.0/Tutorials/Vitis-AI-Vivado-TRD
 	- Generated file should be the following
-        - .bit
-        - .dtsi
-        - xclbin
-        - .json
+        * .bit
+        * .dtsi
+        * xclbin
+        * .json
 
 ### 1.1. Other Git bash command translated from Unix to Windows
 	* LOCATION: AI@DESKTOP-N3NL671 MINGW64 ~/Desktop/Kria-HW/kria-vitis-platforms/platforms/vivado/kv260_ispMipiRx_DP (release-2021.1)
