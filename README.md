@@ -96,7 +96,22 @@ NOTE:
 
 ## 4. Note for bash build.sh
 	- This file should be came from the original file location not from GitHub.
-	- If it is from GitHub this would not run, so take note for the original build.sh file.
+	- If it is from GitHub, this would not run, so take note for the original build.sh file.
 
+# Vitis-AI Installation
+
+- References: https://xilinx.github.io/Vitis-AI/3.0/html/docs/quickstart/mpsoc.html fbclid=IwAR0ah9oX4Zd8f9ifqja1FZjk_2vhF4aItGtAxA6qU55ktKqE7Q9UgzY6bh8
+
+***Installation of Ubuntu 20.04 LTS***
+
+## 1. Go to powershell run in administrator, then execute this code. 
+	- wsl --install -d Ubuntu-20.04
+
+## 2. Installation of Docker, download and install this link.
+	- https://docs.docker.com/desktop/install/windows-install/
+
+## 3. Create accound and sign in the docker. 
+
+## 4. Go to the settings, enable the integration of WSL.
 
 
