@@ -135,9 +135,9 @@
 ### 2.1.4. Inside the Platforms/overlays/Vitis_Libraries
 	- git clone --branch 2022.2 https://github.com/Xilinx/Vitis_Libraries.git
 
-### 2.1.5. Modify the IP Cores of Xilinx from Extracted hardware achirctecure using Xilinx Vivado
+### 2.1.5. Modify the IP Cores of Xilinx from Extracted hardware architecture using Xilinx Vivado
     - Atleast 32 GB of RAM to run synthesis
-    
+
 NOTE: 
 	All libraries and dependencies should have the same version when cloning from GitHub. Since the commands in TCL and Makefiles are designed for Unix, the file paths follow the Linux format. So, update the paths accordingly if you're on Windows, or just use Linux instead.
 
