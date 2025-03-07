@@ -45,4 +45,4 @@
 	- git clone --branch 2022.2 https://github.com/Xilinx/Vitis_Libraries.git
 
 NOTE: 
-	All libraries and dependencies should have the same version when trying to get from GitHub. And since the commands from tcl and makefiles is made from Linux the location paths is from Linux, so change it from your Windows directory or used Linux instead lol.
+	All libraries and dependencies should have the same version when cloning from GitHub. Since the commands in TCL and Makefiles are designed for Unix, the file paths follow the Linux format. So, update the paths accordingly if you're on Windows, or just use Linux instead.
