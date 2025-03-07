@@ -184,7 +184,7 @@
 
 # Common Issues during development
 
-### 1. Solution for wont download the git clone 
+### 1. Solution for won't download the Git 
 	- https://stackoverflow.com/questions/35821245/github-server-certificate-verification-failed
 		*sudo mkdir /usr/local/share/ca-certificates/cacert.org
 		*sudo wget -P /usr/local/share/ca-certificates/cacert.org http://www.cacert.org/certs/root.crt http://www.cacert.org/certs/class3.crt
@@ -194,18 +194,18 @@
 	- https://github.com/h5py/h5py/issues/2035
 	- pip install h5py --only-binary h5py
 
-### 3. Problem in EOF in Git clone. Solution is to increase the buffer size.
+### 3. Problem in EOF in Git clone. Solution is to increase the buffer size
 	- git config --global http.postBuffer 524288000
 	- Or download the whole repository in USB from PC
 	- Or download using tar.gz
 
-### 4. (UBUNTU 22.04) If build.sh command not found, try this one. 	
+### 4. (UBUNTU 22.04) If build.sh command not found, try this one
 	- sudo install g++
 	- /usr/bin/g++ -std=c++17 -I. -I/usr/include/opencv4 -o test_video_facedetect test_video_facedetect.cpp -lopencv_core -lopencv_video -lopencv_videoio -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui -lvitis_ai_library-facedetect -lvitis_ai_library-dpu_task -pthread -lglog
 
-### 5. Issues for the script for face detection. If the bounding box is at the corner the script automatically terminated.
+### 5. Issues for the script for face detection. If the bounding box is at the corner the script automatically terminated
 
-### 6. For the facial recognition. 
+### 6. For the Facial recognition 
     - The model continously to inference images even it is already inference. So the solution is to create a command that the processed images will move to other folder so that the script wont process it again.
 
 ### 7. Pushing local repo from Ubuntu
