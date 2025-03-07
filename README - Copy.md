@@ -238,7 +238,7 @@ _All libraries and dependencies should have the same version when cloning from G
 	```sh
 	*Other Flow: https://github.com/Xilinx/Vitis-AI-Tutorials/tree/2.0/Tutorials/Vitis-AI-Vivado-TRD*
 	```
-	
+
 	```sh
 	Generated file should be the following:
         * .bit
@@ -267,8 +267,9 @@ _All libraries and dependencies should have the same version when cloning from G
 	```
 
 4. To extract the HWA, follow this steps.
-*Reference: https://xilinx.github.io/kria-apps-docs/kv260/2021.1/build/html/docs/build_vivado_design.html?fbclid=IwAR1wRQREIKzEFVgk-2hexwwO_AdSWL624k9fzrkRHklcJKnyJXUP6O3WD94*
-
+	```sh
+	*Reference: https://xilinx.github.io/kria-apps-docs/kv260/2021.1/build/html/docs/build_vivado_design.html?fbclid=IwAR1wRQREIKzEFVgk-2hexwwO_AdSWL624k9fzrkRHklcJKnyJXUP6O3WD94*
+	```
 
 5. This command is for other work flow in extracting the HWA
 	```sh
@@ -282,7 +283,9 @@ _All libraries and dependencies should have the same version when cloning from G
 	```
 
 6. After Generating this files flash it to the FPGA xlnx-config listapps
-*Reference: https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/generating_custom_firmware.html*
+	```sh
+	*Reference: https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/generating_custom_firmware.html*
+	```
 	```sh
 	sudo apt install bootgen-xlnx
 	```
@@ -316,4 +319,6 @@ _All libraries and dependencies should have the same version when cloning from G
 	```
 
 11. Modify the IP Cores of Xilinx from extracted hardware architecture using Xilinx Vivado
-*Atleast 32 GB of RAM to run synthesis*
+	```sh
+	*Atleast 32 GB of RAM to run synthesis*
+	```
