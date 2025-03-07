@@ -68,5 +68,35 @@ NOTE:
 	- sudo install g++
 	- /usr/bin/g++ -std=c++17 -I. -I/usr/include/opencv4 -o test_video_facedetect test_video_facedetect.cpp -lopencv_core -lopencv_video -lopencv_videoio -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui -lvitis_ai_library-facedetect -lvitis_ai_library-dpu_task -pthread -lglog
 
+## 5. Issues for the script for face detection. If the bounding box is at the corner the script automatically terminated.
+
+## 6. For the facial recognition. 
+    - The model continously to inference images even it is already inference. So the solution is to create a command that the processed images will move to other folder so that the script wont process it again.
+
+## 7. Git push from Ubuntu
+	- https://www.youtube.com/watch?v=ePCBuIQJAUc
+
+# Inferencing using your DPU
+
+## 0. Unload existing Accelerator and Load the Hardware Accelerator DPU
+	- sudo xlnx-config --xmutil unloadapp
+	- sudo xlnx-config --xmutil loadapp Visio_DPU
+	
+## 1. From the directory of your model.
+	- source ~/miniforge3/bin/activate
+	- conda activate visio-env
+
+## 2. Inference Facial Recognition
+	- python inference_image.py --modeldir"" --imagedir="../Face_Detect/face_detected"
+
+## 3. Inference Face Detection
+	- source build.sh
+	- /usr/bin/g++ -std=c++17 -I. -I/usr/include/opencv4 -o test_video_facedetect test_video_facedetect.cpp -lopencv_core -lopencv_video -lopencv_videoio -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui -lvitis_ai_library-facedetect -lvitis_ai_library-dpu_task -pthread -lglog
+	- ./Visio-FD densebox_640_360.xmodel 0
+
+## 4. Note for bash build.sh
+	- This file should be came from the original file location not from GitHub.
+	- If it is from GitHub this would not run, so take note for the original build.sh file.
+
 
 
