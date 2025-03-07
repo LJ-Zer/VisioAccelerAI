@@ -367,7 +367,7 @@ _All libraries and dependencies should have the same version when cloning from G
 
 ### Vitis-AI Installation
 
-*References: https://xilinx.github.io/Vitis-AI/3.0/html/docs/quickstart/mpsoc htmlfbclid=IwAR0ah9oX4Zd8f9ifqja1FZjk_2vhF4aItGtAxA6qU55ktKqE7Q9UgzY6bh8*
+*References: https://xilinx.github.io/Vitis-AI/3.0/html/docs/quickstart/mpsochtmlfbclid=IwAR0ah9oX4Zd8f9ifqja1FZjk_2vhF4aItGtAxA6qU55ktKqE7Q9UgzY6bh8*
 	
 1. Installation of Ubuntu 20.04 LTS. Go to powershell run in administrator, then execute this code. 
 	```sh
@@ -393,3 +393,98 @@ _All libraries and dependencies should have the same version when cloning from G
 	```sh
 	./docker_run.sh xilinx/vitis-ai-pytorch-cpu:latest
 	```
+
+### Common Issues during development
+
+1. Solution for won't download the Git 
+*https://stackoverflow.com/questions/35821245/github-server-certificate-verification-failed* 
+	```sh
+	sudo mkdir /usr/local/share/ca-certificates/cacert.org
+	```
+	```sh
+	sudo wget -P /usr/local/share/ca-certificates/cacert.org http://www.cacert.org/certs/root.crt http://www.cacert.org/certs/class3.crt
+	```
+	```sh
+	sudo update-ca-certificates
+	```
+
+2. Problem installing the Anaconda TF dependencies H5py 
+*https://github.com/h5py/h5py/issues/2035*
+	```sh
+	pip install h5py --only-binary h5py
+	```
+
+3. Problem in EOF in Git clone. Solution is to increase the buffer size
+	```sh
+	git config --global http.postBuffer 524288000
+	```
+	```sh	
+	Or download the whole repository in USB from PC
+	```
+	```sh
+	- Or download using tar.gz
+	```
+4. (UBUNTU 22.04) If build.sh command not found, try this one
+	```sh
+	sudo install g++
+	```
+	```sh 
+	/usr/bin/g++ -std=c++17 -I. -I/usr/include/opencv4 -o test_video_facedetect test_video_facedetect.cpp -lopencv_core -lopencv_video -lopencv_videoio -lopencv_imgproc -lopencv_imgcodecs -lopencv_highgui -lvitis_ai_library-facedetect -lvitis_ai_library-dpu_task -pthread -lglog
+	```
+
+5. Issues for the script for face detection. If the bounding box is at the corner the script automatically terminated
+
+6. For the Facial recognition 
+    ```sh
+	The model continously to inference images even it is already inference. So the solution is to create a command that the processed images will move to other folder so that the script wont process it again.
+	```
+7. Pushing local repo from Ubuntu
+*https://www.youtube.com/watch?v=ePCBuIQJAUc*
+
+
+### Using Digilent Arty Z7 20T (For further development hehe)
+
+*This is instruction for accessing the Hardware design for Digilent Arty Z7 20T based on Zynq 7000 SoC.*
+
+#### ***Installation for Vivado 2022.1***
+
+```sh
+*https://www.xilinx.com/member/forms/download/xef.html?filename=Xilinx_Unified_2022.1_0420_0327_Win64.exe*
+```
+```sh
+*Note: Fill up the necessary information and scroll down for the download button. It requires 150 GB of storage.*
+```
+
+1. ***Zynq Files***
+	```sh
+	git clone https://github.com/Xilinx/PYNQ.git
+	```
+
+2. Steps
+```sh
+1. From the folder of the Pynq, go to Pynq/boards/Pynq-Z1/base. And copy the address of that folder.
+```
+```sh 
+1. Open the Vivado 2022.1
+```
+```sh
+2. In the main page of the Vivado, go to the "window" tab, and click the TCL Console.
+```
+```sh
+3. In the console, type "cd {paste/the/address/of/the/folder}"
+```
+```sh
+4. Enter, and wait for the loading time.
+```
+```sh
+5. In the console again, type "source ./build_ip.tcl"
+```
+```sh
+6. Enter, and wait for the loading time.
+```
+```sh
+7. In the console again,  type "source ./base.tcl"
+```
+```sh
+8. And wait for the loading time, it takes a lot of time to see the hardware design.
+```
