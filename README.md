@@ -3,10 +3,11 @@
 ## 1. Generate this four files from Xilinx Vivado
 	- Reference: https://xilinx.github.io/kria-apps-docs/kv260/2021.1/build/html/docs/build_vivado_design.html
 	- Other Flow: https://github.com/Xilinx/Vitis-AI-Tutorials/tree/2.0/Tutorials/Vitis-AI-Vivado-TRD
-	1. .bit
-	2. .dtsi
-	3. xclbin
-	4. .json
+	- Generated file should be the following
+        - .bit
+        - .dtsi
+        - xclbin
+        - .json
 
 ### 1.1. Other Git bash command translated from Unix to Windows
 	* LOCATION: AI@DESKTOP-N3NL671 MINGW64 ~/Desktop/Kria-HW/kria-vitis-platforms/platforms/vivado/kv260_ispMipiRx_DP (release-2021.1)
@@ -118,4 +119,92 @@ NOTE:
 	- source /home/lj/petalinux_sdk_2023.1/environment-setup-cortexa72-cortexa53-xilinx-linux
 	- ./docker_run.sh xilinx/vitis-ai-pytorch-cpu:latest
 
+# Xilinx Kria Configuration
 
+## 1. Install BalenaEtcher or Win32Diskmanager to flash the Ubuntu 20.04 in Xilinx Kria. Follow the steps in the link.
+	- https://www.amd.com/en/products/system-on-modules/kria/k26/kv260-vision-starter-kit/getting-started-ubuntu/setting-up-the-sd-card-image.html
+	- (other support) https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/2037317633/Getting+Started+with+Certified+Ubuntu+20.04+LTS+for+Xilinx+Devices
+	- (other support) https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/1641152513/Kria+SOMs+Starter+Kits#Vitis-Platforms
+
+## 2. After flashing 
+	- Follow the steps from the documentation. Set up the Ubuntu user account.
+
+### 2.1. (UBUNTU 22.04 and 20.04) Update the system using this command in terminal
+	- sudo apt-get update
+	- sudo apt-get upgrade
+
+## 3. Follow the steps here: This documentation will run the accelerator and face detection in Kria
+	- https://www.xilinx.com/developer/articles/building-running-vitis-ai-on-kria-with-ubuntu.html
+
+### 3.1. Install the xlnx-config libraries
+	- sudo snap install xlnx-config --classic
+	- sudo snap install xlnx-config --classic --channel=1.x
+	- xlnx-config.sysinit
+	- sudo xlnx-config --snap --install xlnx-nlp-smartvision
+
+### 3.1.2. (UBUNTU 22.04) Install Vitis-AI libraries 
+	- Reference: https://xilinx-wiki.atlasssian.net/wiki/spaces/A/pages/2072838191/Building+Vitis-AI+Sample+Applications+on+Certified+Ubuntu+20.04+LTS+for+Xilinx+Devices
+	- sudo snap install xlnx-config --classic
+	- xlnx-config.sysinit
+	- sudo apt -y update
+ 	- sudo apt -y install libopencv-dev
+	- sudo apt -y install libgoogle-glog-dev
+	
+### 3.1. (UBUNTU 22.04) 
+	- Reference: https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/nlp-smartvision/docs/app_deployment_nlp.html
+	- sudo apt search xlnx-firmware-kv260
+	- sudo apt install xlnx-firmware-kv260-nlp-smartvision
+	- sudo xmutil listapps
+	- sudo xmutil unloadapp
+	- sudo xmutil loadapp kv260-nlp-smartvision
+
+## 3.1.1. (UBUNTU 20.04) Install Opencv.hpp files and other dependencies for the C++ file compilations.
+	- sudo apt-get update
+	- sudo apt-get upgrade
+	- sudo apt install libopencv-dev
+	- sudo apt install libgoogle-glog-dev
+
+## 3.1.2. (UBUNTU 22.04) Install Opencv.hpp files and other dependencies for the C++ file compilations.
+	- sudo apt -y update
+	- sudo apt -y install libopencv-dev
+	- sudo apt -y install libgoogle-glog-dev
+	- sudo apt -y install vitis-ai-library
+	- sudo apt -y install libjson-c-dev
+
+## 3.2. Install Vitis-AI Library Samples
+	- cd ~
+	- git clone https://github.com/Xilinx/Vitis-AI.git
+	- cd Vitis-AI
+	- git checkout tags/v1.3.2
+
+## 4. Also Git clone this repository. This repo is the existing architecture of VisioAccelerAI
+	- cd ~/Desktop
+	- git clone https://github.com/Ze-r000/Visio_FPGA.git
+
+## 4.1. Place the Densebox_640_360 model. 
+	- cd Visio_FPGA
+	- mkdir /usr/share/vitis_ai_library/models
+	- cp densebox_640_360 /usr/share/vitis_ai_library/models -r
+
+## 4.2. Clone the Face-Detected Folder for Git_Upload Repository
+	- git clone https://github.com/Ze-r000/Face-Detected.git
+
+## 5. Download and Install Miniforge3 for facial recognition model inferencing. Just follow the steps in the GitHub instructions. Choose the Linux aarrch64 for Ubuntu 20.04
+	- https://github.com/conda-forge/miniforge
+
+## 5.1. It is an .sh file to install it, go to the directory where the .sh file located.
+	- bash <filename.sh>
+
+## 5.2. To make conda default to your terminal execute this command
+	- cd ~/
+	- export PATH="$HOME/miniforge3/bin:$PATH"
+
+## 6. Create Anaconda environment
+	- conda create --name visio-env python=3.9
+
+## 7. Activate Visio Environment
+	- conda activate visio-env
+
+## 8. Install Dependencies for VisioAccelerAI Facial Recognition
+	- pip install h5py --only-binary h5py
+	- pip install tensorflow opencv-python
