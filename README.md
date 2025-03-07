@@ -1,12 +1,18 @@
 # Notes for each Folders
 
 ### 1. Face_Detect
+    - This folder contains the face detection model, just follow the steps below to run the scripts inside.
 ### 2. Facial_Recog
+    - This folder contains the facial recognition detection model, just follow the steps below to run the scripts inside.
 ### 3. Layers Counter
+    - This folder used to have analyzation for each model layers, this contains Jupyter notebook to run the breakdown of model layers.
 ### 4. Results
+    - Contains the results from Xilinx Vivado and the results from models.
 ### 5. Visio_DPU
+    - Contains the important files to run the hardware accelerator to Xilinx. Just follow the steps below.
 ### 6. Face_Detect.sh -- Facial Recog.sh -- executes.sh
-
+    - This script is only used to automate tasks upon the board's startup. Don't worry about it.
+    
 # Xilinx Kria Configuration
 
 ### 1. Install BalenaEtcher or Win32Diskmanager to flash the Ubuntu 20.04 in Xilinx Kria. Follow the steps in the link.
