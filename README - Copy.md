@@ -232,10 +232,13 @@ _Below is the installation process how to install operating system to XIlinx Kri
 _All libraries and dependencies should have the same version when cloning from GitHub. Since the commands in TCL and Makefiles are designed for Unix, the file paths follow the Linux format. So, update the paths accordingly if you're on Windows, or just use Linux instead._
 
 1. Generate this four files from Xilinx Vivado
-*Reference: https://xilinx.github.io/kria-apps-docs/kv260/2021.1/build/html/docs/build_vivado_design.html*
-**
-*Other Flow: https://github.com/Xilinx/Vitis-AI-Tutorials/tree/2.0/Tutorials/Vitis-AI-Vivado-TRD*
-
+	```sh
+	*Reference: https://xilinx.github.io/kria-apps-docs/kv260/2021.1/build/html/docs/build_vivado_design.html*
+	```
+	```sh
+	*Other Flow: https://github.com/Xilinx/Vitis-AI-Tutorials/tree/2.0/Tutorials/Vitis-AI-Vivado-TRD*
+	```
+	
 	```sh
 	Generated file should be the following:
         * .bit
