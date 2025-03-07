@@ -75,9 +75,9 @@ _Below is the installation process how to install operating system to XIlinx Kri
    ```	
 5. (UBUNTU 22.04) Install Vitis-AI libraries
 
-	_```sh 
+	```sh 
 	https://xilinx-wiki.atlasssian.net/wiki/spaces/A/pages/2072838191/Building+Vitis-AI+Sample+Applications+on+Certified+Ubuntu+20.04+LTS+for+Xilinx+Devices
-	```_
+	```
 
 	```sh
 	sudo snap install xlnx-config --classic
@@ -97,4 +97,29 @@ _Below is the installation process how to install operating system to XIlinx Kri
 
 	```sh
 	sudo apt -y install libgoogle-glog-dev
+	```
+6. (UBUNTU 22.04) 
+
+	```sh 
+	https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/nlp-smartvision/docs/app_deployment_nlp.html
+	```
+
+	```sh
+	sudo apt search xlnx-firmware-kv260
+	```
+
+	```sh
+	sudo apt install xlnx-firmware-kv260-nlp-smartvision
+	```
+
+	```sh
+	sudo xmutil listapps
+ 	```
+
+	```sh
+	sudo xmutil unloadapp
+	```
+
+	```sh
+	sudo xmutil loadapp kv260-nlp-smartvision
 	```
