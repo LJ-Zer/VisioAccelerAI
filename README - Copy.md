@@ -198,7 +198,7 @@ _Below is the installation process how to install operating system to XIlinx Kri
 	https://github.com/conda-forge/miniforge
 	```
 
-14. 5.1. It is an .sh file to install it, go to the directory where the .sh file located.
+14. It is an bash file to install it, go to the directory where the .sh file located.
 	```sh
 	bash <filename.sh>
 	```
@@ -233,6 +233,7 @@ _All libraries and dependencies should have the same version when cloning from G
 
 1. Generate this four files from Xilinx Vivado
 *Reference: https://xilinx.github.io/kria-apps-docs/kv260/2021.1/build/html/docs/build_vivado_design.html*
+**
 *Other Flow: https://github.com/Xilinx/Vitis-AI-Tutorials/tree/2.0/Tutorials/Vitis-AI-Vivado-TRD*
 
 	```sh
