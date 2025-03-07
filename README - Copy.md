@@ -73,3 +73,28 @@ _Below is the installation process how to install operating system to XIlinx Kri
    ```sh
    sudo xlnx-config --snap --install xlnx-nlp-smartvision
    ```	
+5. (UBUNTU 22.04) Install Vitis-AI libraries
+
+	```sh 
+	https://xilinx-wiki.atlasssian.net/wiki/spaces/A/pages/2072838191/Building+Vitis-AI+Sample+Applications+on+Certified+Ubuntu+20.04+LTS+for+Xilinx+Devices
+	```
+	
+	```sh
+	sudo snap install xlnx-config --classic
+	```
+
+	```sh
+	xlnx-config.sysinit
+	```
+
+	```sh
+	sudo apt -y update
+ 	```
+
+	```sh
+	sudo apt -y install libopencv-dev
+	```
+
+	```sh
+	sudo apt -y install libgoogle-glog-dev
+	```
