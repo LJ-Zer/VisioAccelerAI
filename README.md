@@ -5,7 +5,7 @@
 	- (other support) https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/2037317633/Getting+Started+with+Certified+Ubuntu+20.04+LTS+for+Xilinx+Devices
 	- (other support) https://xilinx-wiki.atlassian.net/wiki/spaces/A/pages/1641152513/Kria+SOMs+Starter+Kits#Vitis-Platforms
 
-### 2. After flashing 
+### 2. After Flashing the OS 
 	- Follow the steps from the documentation. Set up the Ubuntu user account.
 
 ### 2.1. (UBUNTU 22.04 and 20.04) Update the system using this command in terminal
@@ -99,9 +99,9 @@
         * xclbin
         * .json
 
-### 1.1. Other Git bash command translated from Unix to Windows
+### 1.1. Sample bash command translated from Unix to Windows
 	* LOCATION: AI@DESKTOP-N3NL671 MINGW64 ~/Desktop/Kria-HW/kria-vitis-platforms/platforms/vivado/kv260_ispMipiRx_DP (release-2021.1)
-		- /f/Vivado/Vivado/2021.2/bin/vivado.bat -mode batch -source scripts/main.tcl
+	* Translated: /f/Vivado/Vivado/2021.2/bin/vivado.bat -mode batch -source scripts/main.tcl
 
 ### 1.2. Location of the Boards in Xilinx 
 	- Use the 2021.1 version of the boards. Download the repo to the 2021.1 specific branch and replace the directory of your xilinxboardstore files.
@@ -111,12 +111,12 @@
 ### 1.2.1. To extract the HWA, follow this steps.
 	- https://xilinx.github.io/kria-apps-docs/kv260/2021.1/build/html/docs/build_vivado_design.html?fbclid=IwAR1wRQREIKzEFVgk-2hexwwO_AdSWL624k9fzrkRHklcJKnyJXUP6O3WD94
 
-### 1.3. THIS COMMAND IS FOR OTHER WORK FLOW IN EXTRACTING THE HWA OF KRIA
+### 1.3. This command is for other work flow in extracting the HWA
 	- export TRD_HOME=C:/Users/AI/Desktop/Kria-HW/Vitis-AI
 	- source F:/Vivado/Vivado/2021.2/settings64.sh
 	- C:/Users/AI/Desktop/Kria-HW/Vitis-AI/dsa/DPU-TRD/prj/Vivado/scripts/trd_prj.tcl
 
-### 2. After Generating this files flash it to the FPGA xlnx-config listapps. Find the design flow of this.
+### 2. After Generating this files flash it to the FPGA xlnx-config listapps
 	- Reference: https://xilinx.github.io/kria-apps-docs/kv260/2022.1/build/html/docs/generating_custom_firmware.html
 	- sudo apt install bootgen-xlnx
 	- sudo make -C boards/ install
@@ -135,6 +135,9 @@
 ### 2.1.4. Inside the Platforms/overlays/Vitis_Libraries
 	- git clone --branch 2022.2 https://github.com/Xilinx/Vitis_Libraries.git
 
+### 2.1.5. Modify the IP Cores of Xilinx from Extracted hardware achirctecure using Xilinx Vivado
+    - Atleast 32 GB of RAM to run synthesis
+    
 NOTE: 
 	All libraries and dependencies should have the same version when cloning from GitHub. Since the commands in TCL and Makefiles are designed for Unix, the file paths follow the Linux format. So, update the paths accordingly if you're on Windows, or just use Linux instead.
 
